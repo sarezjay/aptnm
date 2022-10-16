@@ -45,7 +45,9 @@ export default {
     const code = ref('')
 
     const go = async () => {
-      window.location.href = `https://tiny.cc/${code.value}`
+      if (code.value.length > 0) {
+        window.location.href = `https://tiny.cc/${code.value}`
+      }
     }
 
     return {
